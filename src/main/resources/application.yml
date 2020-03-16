@@ -1,0 +1,27 @@
+spring:
+  freemarker:
+    request-context-attribute: req
+    suffix: .ftl
+    content-type: text/html
+    enabled: true
+    cache: false
+    template-loader-path: classpath:/templates/
+    charset: UTF-8
+    settings:
+      number_format: '0.##'
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://45.82.79.253:3306/hcjz?serverTimezone=Asia/Shanghai&useSSL=false&characterEncoding=utf8
+    url: jdbc:mysql://wx.hnarzx.com:3306/ftpDownloader?serverTimezone=Asia/Shanghai&useSSL=false&characterEncoding=utf8
+    username: ftpDownloader
+    password: 153007lwj
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 81
+#  address: 69.12.71.27
+logging:
+  level:
+    org.springframework.data: debug
